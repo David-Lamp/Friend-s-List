@@ -1,0 +1,25 @@
+
+
+<div class="jumbotron">
+  <h1 class="display-4">
+  	<%= @friend.first_name %>
+  	<%= @friend.last_name %>
+  </h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>
+  <strong>Email:</strong>
+  <%= @friend.email %>
+  </p>
+
+  <p>
+  <strong>Phone:</strong>
+  <%= @friend.phone %>
+  </p>
+</div>
+
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-dark btn-lg btn-block" %> 
+
+<%= link_to 'Back', friends_path, class:"btn btn-info btn-lg btn-block" %>
+
+<%= link_to 'Destroy', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-lg btn-block" %>
